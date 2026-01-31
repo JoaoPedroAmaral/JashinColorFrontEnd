@@ -8,30 +8,27 @@
   </head>
   <body>
     <header class="NavBar">
-      <div class="LogoNavbar">
-        <img
-          src="../image/jashiHeadIcon.png"
-          width="50px"
-          height="50px"
-          class="iconNavBar"
-          alt="Logo"
-        />
-        <h3 class="colorashin">
-          <span>C</span><span>o</span><span>l</span><span>o</span><span>r</span
-          ><span>a</span><span>s</span><span>h</span><span>i</span
-          ><span>n</span>
-        </h3>
-      </div>
-
-      <nav class="NavLinks">
-        <a href="InitialPage.html" class="NavLink">Home</a>
-        <a href="About.html" class="NavLink">About</a>
-      </nav>
+            <a href="NewInicialPage.html" class="NavLink">
+        <div class="LogoNavbar">
+          <img
+            src="../image/jashiHeadIcon.png"
+            width="50px"
+            height="50px"
+            class="iconNavBar"
+            alt="Logo"
+          />
+          <h3 class="colorashin">
+            <span>C</span><span>o</span><span>l</span><span>o</span
+            ><span>r</span><span>a</span><span>s</span><span>h</span
+            ><span>i</span><span>n</span>
+          </h3>
+        </div>
+      </a>
 
       <div class="NavButtons">
-        <button class="LoginButton">Login</button>
+        <a class="LoginButton" style="text-decoration: none;" href="MinhaConta.html">Minha conta</a>
+        <button class="SignUpButton" id="logoutBtn" style="padding: 8px 16px; font-size: 16px;">Sair</button>
         <!--Tambem será o botao de minha conta-->
-        <button class="SignUpButton">Registre-se</button>
       </div>
     </header>
     <div class="bodyTransform">
@@ -47,6 +44,7 @@
         </div>
       </label>
       <input style="display: none;" type="file" id="fileInput" accept="image/*" multiple/>
+      <button class="transformButton" style="margin-top: 32px;" id="transformButton">Transformar Imagem</button>
     </div>
     <footer class="Footer">
       <div class="LinkFooter">
