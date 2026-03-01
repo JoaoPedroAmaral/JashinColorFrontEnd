@@ -3,52 +3,76 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="Footer">
-      <div className="LinkFooter">
-        <div>
-          <img
-            src="/assets/image/jashiHeadIcon.png"
-            width="30%"
-            className="iconFooter"
-            alt="Logo"
-          />
+    <footer className="bg-[#dcc8ffb3] text-mainText text-center flex flex-col items-center justify-center p-2.5 mt-5">
+      <div className="flex justify-evenly w-full mb-2.5">
+        <div className="w-1/3 flex flex-col items-center justify-center text-justify">
+          <img src="/assets/image/jashiHeadIcon.png" width="30%" alt="Logo" />
         </div>
-        <div>
-          <h4 className="FooterTitle">Links Rápidos</h4>
-          <Link to="/" className="FooterLink">
+        <div className="w-1/3 flex flex-col justify-center text-justify">
+          <h4 className="font-chango text-brandPink m-0 p-0 my-2.5">
+            Links Rápidos
+          </h4>
+          <Link
+            to="/"
+            className="text-mainText no-underline my-1.5 mx-2.5 font-bold hover:text-brandPink hover:underline"
+          >
             Home
           </Link>
-          <Link to="/about" className="FooterLink">
+          <Link
+            to="/about"
+            className="text-mainText no-underline my-1.5 mx-2.5 font-bold hover:text-brandPink hover:underline"
+          >
             About
           </Link>
-          <Link to="/transform" className="FooterLink">
+          <Link
+            to="/transform"
+            className="text-mainText no-underline my-1.5 mx-2.5 font-bold hover:text-brandPink hover:underline"
+          >
             Transform Image
           </Link>
-          <Link to="/account" className="FooterLink">
+          <Link
+            to="/account"
+            className="text-mainText no-underline my-1.5 mx-2.5 font-bold hover:text-brandPink hover:underline"
+          >
             Historico
           </Link>
-          <Link to="/download" className="FooterLink">
+          <Link
+            to="/download"
+            className="text-mainText no-underline my-1.5 mx-2.5 font-bold hover:text-brandPink hover:underline"
+          >
             Download
           </Link>
         </div>
-        <div>
-          <h4 className="FooterTitle">Suporte</h4>
-          <Link to="/help" className="FooterLink">
+        <div className="w-1/3 flex flex-col justify-center text-justify">
+          <h4 className="font-chango text-brandPink m-0 p-0 my-2.5">Suporte</h4>
+          <Link
+            to="/help"
+            className="text-mainText no-underline my-1.5 mx-2.5 font-bold hover:text-brandPink hover:underline"
+          >
             Ajuda
           </Link>
-          <Link to="/contact" className="FooterLink">
+          <Link
+            to="/contact"
+            className="text-mainText no-underline my-1.5 mx-2.5 font-bold hover:text-brandPink hover:underline"
+          >
             Contato
           </Link>
-          <h4 className="FooterTitle">Legal</h4>
-          <Link to="/terms" className="FooterLink">
+          <h4 className="font-chango text-brandPink m-0 p-0 my-2.5">Legal</h4>
+          <Link
+            to="/terms"
+            className="text-mainText no-underline my-1.5 mx-2.5 font-bold hover:text-brandPink hover:underline"
+          >
             Termo de uso
           </Link>
-          <Link to="/privacy" className="FooterLink">
+          <Link
+            to="/privacy"
+            className="text-mainText no-underline my-1.5 mx-2.5 font-bold hover:text-brandPink hover:underline"
+          >
             Privacidade
           </Link>
         </div>
       </div>
-      <div className="LineFooter"></div>
+      <div className="border-t border-mainText flex justify-center items-center w-4/5 my-2.5"></div>
       <p style={{ margin: 0 }}>
         © 2026 Colorashin. Todos os direitos reservados.
       </p>

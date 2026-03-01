@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import ArrowNavButton from "../components/ArrowNavButton";
 
 export default function TransformPage() {
   const [selectedFiles, setSelectedFiles] = useState([]);
@@ -23,80 +24,40 @@ export default function TransformPage() {
   return (
     <>
       <NavBar />
-      <div
-        className="bodyTransform"
-        style={{
-          marginTop: "80px",
-          minHeight: "calc(100vh - 80px - 200px)",
-          padding: "40px",
-        }}
-      >
-        <h1 className="titleTransform">Transforme Imagem em Desenho</h1>
-        <p className="legendTransform">
+      <div className="min-h-[calc(100vh-280px)] flex flex-col items-center pt-[80px] p-10 m-auto">
+        <h1 className="text-brandPink font-chango m-0 p-0">
+          Transforme Imagem em Desenho
+        </h1>
+        <p className="m-0 p-0 text-justify font-chango mt-2">
           Envie uma foto e veja a mágica acontecer!
         </p>
 
         <label
-          className="upload-box"
+          className="bg-[#f0f0f0] border-4 border-dashed border-[#ccc] p-[50px] w-full max-w-[700px] shadow-[0_0_10px_rgba(0,0,0,0.1)] text-center transition-all duration-300 font-chango hover:border-[#0f3258] cursor-pointer relative mt-8"
           htmlFor="fileInput"
-          style={{ cursor: "pointer", position: "relative" }}
         >
           <div className="coisas">Escolher imagem</div>
 
           {selectedFiles.length > 0 && (
-            <div id="imagePreviewContainer" style={{ marginTop: "20px" }}>
+            <div id="imagePreviewContainer" className="mt-5">
               <p>Imagens selecionadas: {selectedFiles.length}</p>
               <div
                 id="previewList"
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: "15px",
-                  justifyContent: "center",
-                  marginTop: "15px",
-                }}
+                className="flex flex-wrap gap-4 justify-center mt-4"
               >
                 {selectedFiles.map((fileData, index) => (
-                  <div
-                    key={index}
-                    style={{
-                      position: "relative",
-                      width: "100px",
-                      height: "100px",
-                    }}
-                  >
+                  <div key={index} className="relative w-[100px] h-[100px]">
                     <img
                       src={fileData.preview}
                       alt={`Preview ${index}`}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        borderRadius: "8px",
-                      }}
+                      className="w-full h-full object-cover rounded-lg"
                     />
                     <button
                       onClick={(e) => {
                         e.preventDefault();
                         removeFile(index);
                       }}
-                      style={{
-                        position: "absolute",
-                        top: "-8px",
-                        right: "-8px",
-                        background: "red",
-                        color: "white",
-                        border: "none",
-                        borderRadius: "50%",
-                        width: "24px",
-                        height: "24px",
-                        cursor: "pointer",
-                        fontWeight: "bold",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        padding: 0,
-                      }}
+                      className="absolute -top-2 -right-2 bg-red-600 text-white border-none rounded-full w-6 h-6 cursor-pointer font-bold flex items-center justify-center p-0"
                     >
                       &times;
                     </button>
@@ -108,7 +69,7 @@ export default function TransformPage() {
         </label>
 
         <input
-          style={{ display: "none" }}
+          className="hidden"
           type="file"
           id="fileInput"
           accept="image/*"
@@ -116,14 +77,14 @@ export default function TransformPage() {
           onChange={handleFileChange}
         />
         <button
-          className="transformButton"
-          style={{ marginTop: "32px" }}
+          className="bg-brandPink text-white font-sans border-none py-3 px-6 rounded cursor-pointer text-base font-bold no-underline inline-block hover:bg-brandPinkDark mt-8"
           id="transformButton"
         >
           Transformar Imagem
         </button>
       </div>
       <Footer />
+      <ArrowNavButton />
     </>
   );
 }
